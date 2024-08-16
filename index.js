@@ -229,7 +229,7 @@ app.get('/check-session', (req, res) => {
 // Rate limiting middleware
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 5,
+    max: 100,
     message: "Too many requests from this IP, please try again after 15 minutes"
 });
 app.use(limiter);
